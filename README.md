@@ -4,13 +4,47 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+# Flutter Task Management App
 
-A few resources to get you started if this is your first Flutter project:
+This Flutter app demonstrates a basic task management system using the Parse Server SDK for backend integration.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- View a list of tasks
+- Add tasks with descriptions
+- View task details
+- Delete tasks
+- Update task names and descriptions
+
+## Setup
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/your-username/your-repository.git
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    flutter pub get
+    ```
+
+3. Run the app:
+
+    ```bash
+    flutter run
+    ```
+
+## Configuration
+
+Make sure to replace the Parse Server credentials in the `main.dart` file with your own:
+
+```dart
+await Parse().initialize(
+  'your-app-id',
+  'your-server-url',
+  clientKey: 'your-client-key',
+  autoSendSessionId: true,
+  debug: true,
+);
